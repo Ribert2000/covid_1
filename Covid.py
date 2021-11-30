@@ -38,3 +38,6 @@ data[data['Recuperado']=='Fallecido'].shape[0]
 
 #7. Ordenar de Mayor a menor por tipo de caso (Importado, en estudio, Relacionado)
 data.groupby(['Tipo de contagio']).size().sort_values(ascending=False)
+
+#8. Número de departamentos afectados
+data[(data.Recuperado != ' ')].groupby(['Nombre departamento']).size().shape[0]
