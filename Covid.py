@@ -91,3 +91,5 @@ fromula = ((agrupamiento / agrupamiento.sum()) * 100)['Fallecido']
 agrupamiento_2 = data.groupby('Recuperado').size()
 formula_2 = ((agrupamiento_2 / agrupamiento_2.sum()) * 100)['Recuperado']
 print("mortalidad {}%, recuperación {}%".format(round(fromula, 2), round(formula_2, 2)))
+
+#23. Liste la tasa de mortalidad y recuperación que tiene cada departamento
