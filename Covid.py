@@ -121,3 +121,6 @@ data[(data['Recuperado']=='Activo') ].shape[0]/(data['Recuperado'].shape[0])*100
 
 #32. Haga un gráfico de barras por atención de toda Colombia
 data.groupby(['Ubicación del caso']).size().plot.bar()
+
+#33. Haga un gráfico de barras por Sexo de toda Colombia
+data.groupby(['Sexo']).size().plot.bar()
