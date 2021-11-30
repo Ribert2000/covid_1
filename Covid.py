@@ -70,3 +70,6 @@ data[(data.Recuperado == 'Recuperado')]['Nombre municipio'].value_counts().head(
 agrupamiento = data.groupby(['Nombre departamento', 'Nombre municipio'])
 ordenamiento = agrupamiento.size().sort_values(ascending=False)
 print("{}".format(ordenamiento))
+
+#18. Número de Mujeres y hombres contagiados por ciudad por departamento
+data[(data.Recuperado == 'Activo')].groupby(['Nombre municipio','Nombre departamento', 'Sexo']).size()
