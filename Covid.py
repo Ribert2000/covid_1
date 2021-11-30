@@ -20,3 +20,6 @@ data['Sexo'].replace('m','M', inplace=True)
 
 #1. Número de casos de Contagiados en el País.
 data[(data.Recuperado == 'Activo')].shape[0]
+
+#2. Número de Municipios Afectados
+data[(data.Recuperado != ' ')].groupby(['Nombre municipio']).size().shape[0]
