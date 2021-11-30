@@ -59,3 +59,6 @@ data[(data.Recuperado == 'Recuperado')]['Nombre departamento'].value_counts().he
 
 #14. Liste de mayor a menor los 10 municipios con mas casos de contagiados
 data[(data.Recuperado == 'Activo')]['Nombre municipio'].value_counts().head(10)
+
+#15. Liste de mayor a menor los 10 municipios con mas casos de fallecidos
+data[(data.Recuperado == 'Fallecido')]['Nombre municipio'].value_counts().head(10)
