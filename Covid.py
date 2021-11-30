@@ -95,3 +95,6 @@ print("mortalidad {}%, recuperación {}%".format(round(fromula, 2), round(formul
 #23. Liste la tasa de mortalidad y recuperación que tiene cada departamento
 
 #24. Liste la tasa de mortalidad y recuperación que tiene cada ciudad
+
+#25. Liste por cada ciudad la cantidad de personas por atención
+data[(data['Ubicación del caso'] != 'Fallecido')].groupby(['Nombre municipio']).size()
