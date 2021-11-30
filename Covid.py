@@ -50,3 +50,6 @@ data[(data.Recuperado != ' ')].groupby(['Ubicación del caso']).size().sort_valu
 
 #11. Liste de mayor a menor los 10 departamentos con mas casos de contagiados
 data['Nombre departamento'].value_counts().head(10)
+
+#12. Liste de mayor a menor los 10 departamentos con mas casos de fallecidos
+data[(data.Recuperado == 'Fallecido')]['Nombre departamento'].value_counts().head(10)
