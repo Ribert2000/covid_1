@@ -65,3 +65,8 @@ data[(data.Recuperado == 'Fallecido')]['Nombre municipio'].value_counts().head(1
 
 #16. Liste de mayor a menor los 10 municipios con mas casos de recuperados
 data[(data.Recuperado == 'Recuperado')]['Nombre municipio'].value_counts().head(10)
+
+#17. Liste agrupado por departamento y en orden de Mayor a menor las ciudades con mas casos de contagiados
+agrupamiento = data.groupby(['Nombre departamento', 'Nombre municipio'])
+ordenamiento = agrupamiento.size().sort_values(ascending=False)
+print("{}".format(ordenamiento))
