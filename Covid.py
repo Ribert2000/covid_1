@@ -44,3 +44,6 @@ data[(data.Recuperado != ' ')].groupby(['Nombre departamento']).size().shape[0]
 
 #9. Liste los departamentos afectados(sin repetirlos)
 data[(data.Recuperado != ' ')].groupby(['Nombre departamento']).size()
+
+#10. Ordene de mayor a menor por tipo de atención
+data[(data.Recuperado != ' ')].groupby(['Ubicación del caso']).size().sort_values(ascending=False)
