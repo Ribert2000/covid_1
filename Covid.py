@@ -98,3 +98,8 @@ print("mortalidad {}%, recuperación {}%".format(round(fromula, 2), round(formul
 
 #25. Liste por cada ciudad la cantidad de personas por atención
 data[(data['Ubicación del caso'] != 'Fallecido')].groupby(['Nombre municipio']).size()
+
+#26. Liste el promedio de edad por sexo por cada ciudad de contagiados
+agrupamiento = data.groupby(['Nombre municipio', 'Sexo'])
+fun_prom = dat.Edad.mean()
+print("{}".format(cantidad))
