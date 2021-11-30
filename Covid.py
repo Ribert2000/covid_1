@@ -84,3 +84,10 @@ data[data['Recuperado'] == 'Activo'].groupby(['Nombre del país']).size()
 
 #21. Liste de mayor a menor las fechas donde se presentaron mas contagios
 data['Fecha de inicio de síntomas'].value_counts()
+
+#22. Diga cual es la tasa de mortalidad y recuperación que tiene toda Colombmia
+agrupamiento = data.groupby('Estado').size()
+fromula = ((agrupamiento / agrupamiento.sum()) * 100)['Fallecido']
+agrupamiento_2 = data.groupby('Recuperado').size()
+formula_2 = ((agrupamiento_2 / agrupamiento_2.sum()) * 100)['Recuperado']
+print("mortalidad {}%, recuperación {}%".format(round(fromula, 2), round(formula_2, 2)))
