@@ -103,3 +103,6 @@ data[(data['Ubicación del caso'] != 'Fallecido')].groupby(['Nombre municipio'])
 agrupamiento = data.groupby(['Nombre municipio', 'Sexo'])
 fun_prom = dat.Edad.mean()
 print("{}".format(cantidad))
+
+#27. Grafique las curvas de contagio, muerte y recuperación de toda Colombia acumulados
+data.Recuperado.value_counts().plot.bar()
