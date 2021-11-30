@@ -17,3 +17,6 @@ data['Ubicación del caso'].replace('casa','Casa', inplace=True)
 data['Recuperado'].replace('fallecido','Fallecido', inplace=True)
 data['Sexo'].replace('f','F', inplace=True)
 data['Sexo'].replace('m','M', inplace=True)
+
+#1. Número de casos de Contagiados en el País.
+data[(data.Recuperado == 'Activo')].shape[0]
