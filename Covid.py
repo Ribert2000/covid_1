@@ -115,3 +115,6 @@ data['Nombre municipio'].value_counts().head(10).plot.bar()
 
 #30. Liste de mayor a menor la cantidad de fallecidos por edad en toda Colombia.
 data[(data.Recuperado == 'Fallecido')].groupby(['Edad']).size().sort_values(ascending=False)
+
+#31. Liste el porcentaje de personas por atención de toda Colombia
+data[(data['Recuperado']=='Activo') ].shape[0]/(data['Recuperado'].shape[0])*100
