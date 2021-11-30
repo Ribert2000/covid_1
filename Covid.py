@@ -47,3 +47,6 @@ data[(data.Recuperado != ' ')].groupby(['Nombre departamento']).size()
 
 #10. Ordene de mayor a menor por tipo de atención
 data[(data.Recuperado != ' ')].groupby(['Ubicación del caso']).size().sort_values(ascending=False)
+
+#11. Liste de mayor a menor los 10 departamentos con mas casos de contagiados
+data['Nombre departamento'].value_counts().head(10)
