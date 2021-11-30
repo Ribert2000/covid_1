@@ -35,3 +35,6 @@ data[data['Recuperado']=='Recuperado'].shape[0]
 
 #6. Número de personas que ha fallecido
 data[data['Recuperado']=='Fallecido'].shape[0]
+
+#7. Ordenar de Mayor a menor por tipo de caso (Importado, en estudio, Relacionado)
+data.groupby(['Tipo de contagio']).size().sort_values(ascending=False)
