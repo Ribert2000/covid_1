@@ -29,3 +29,6 @@ data[(data.Recuperado != ' ')].groupby(['Nombre municipio']).size()
 
 #4. Número de personas que se encuentran en atención en casa
 data[data['Ubicación del caso']=='Casa'].shape[0]
+
+#5. Número de personas que se encuentran recuperados
+data[data['Recuperado']=='Recuperado'].shape[0]
