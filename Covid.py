@@ -78,3 +78,6 @@ data[(data.Recuperado == 'Activo')].groupby(['Nombre municipio','Nombre departam
 dat = data.groupby(['Nombre departamento', 'Nombre municipio', 'Sexo'])
 cantidad = dat.Edad.mean()
 print("{}".format(cantidad))
+
+#20. Liste de mayor a menor el número de contagiados por país de procedencia
+data[data['Recuperado'] == 'Activo'].groupby(['Nombre del país']).size()
