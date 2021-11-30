@@ -26,3 +26,6 @@ data[(data.Recuperado != ' ')].groupby(['Nombre municipio']).size().shape[0]
 
 #3. Liste los municipios afectados (sin repetirlos)
 data[(data.Recuperado != ' ')].groupby(['Nombre municipio']).size()
+
+#4. Número de personas que se encuentran en atención en casa
+data[data['Ubicación del caso']=='Casa'].shape[0]
