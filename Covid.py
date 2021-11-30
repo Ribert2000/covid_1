@@ -32,3 +32,6 @@ data[data['Ubicación del caso']=='Casa'].shape[0]
 
 #5. Número de personas que se encuentran recuperados
 data[data['Recuperado']=='Recuperado'].shape[0]
+
+#6. Número de personas que ha fallecido
+data[data['Recuperado']=='Fallecido'].shape[0]
