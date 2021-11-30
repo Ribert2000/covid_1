@@ -23,3 +23,6 @@ data[(data.Recuperado == 'Activo')].shape[0]
 
 #2. Número de Municipios Afectados
 data[(data.Recuperado != ' ')].groupby(['Nombre municipio']).size().shape[0]
+
+#3. Liste los municipios afectados (sin repetirlos)
+data[(data.Recuperado != ' ')].groupby(['Nombre municipio']).size()
