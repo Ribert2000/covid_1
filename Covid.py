@@ -118,3 +118,6 @@ data[(data.Recuperado == 'Fallecido')].groupby(['Edad']).size().sort_values(asce
 
 #31. Liste el porcentaje de personas por atención de toda Colombia
 data[(data['Recuperado']=='Activo') ].shape[0]/(data['Recuperado'].shape[0])*100
+
+#32. Haga un gráfico de barras por atención de toda Colombia
+data.groupby(['Ubicación del caso']).size().plot.bar()
