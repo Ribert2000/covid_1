@@ -93,3 +93,5 @@ formula_2 = ((agrupamiento_2 / agrupamiento_2.sum()) * 100)['Recuperado']
 print("mortalidad {}%, recuperación {}%".format(round(fromula, 2), round(formula_2, 2)))
 
 #23. Liste la tasa de mortalidad y recuperación que tiene cada departamento
+
+#24. Liste la tasa de mortalidad y recuperación que tiene cada ciudad
